@@ -242,7 +242,8 @@ def gameLoop():
     #while warriorchoice + tankchoice is less than 3, we create
     while warriorChoice + tankChoice < 3:
         option = 3 - (warriorChoice + tankChoice)
-        Dialog('       {}                             '.format(option), 100, 150)
+        Dialog('          {}                             '.format(option), 100, 150)
+        pygame.display.update()
         #a nested loop (for loop) that loops through the possible pygame event
         for event in pygame.event.get():
             if event.type == QUIT:
